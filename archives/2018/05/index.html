@@ -87,7 +87,7 @@
             
               <li class="tag-list-container">
                 <a href="javascript:;">标签</a>
-                
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li></ul>
               </li>
             
           
@@ -151,7 +151,7 @@
 
     <div class="post-list-item article">
       <h3 class="article-header">
-        <a href="/2018/05/22/如何在github上优雅地建立自己的博客/" >
+        <a href="/2018/05/24/如何在github上优雅地建立自己的博客/" >
   如何在github上优雅地建立自己的博客
 </a>
 
@@ -159,52 +159,28 @@
       
 
       <div class="article-info">
-        <a href="/2018/05/22/如何在github上优雅地建立自己的博客/"><span class="article-date">
-  2018-05-22
+        <a href="/2018/05/24/如何在github上优雅地建立自己的博客/"><span class="article-date">
+  2018-05-24
 </span>
 </a>
         
 
         
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+	</span>
+
 
       </div>
       <div class="article-entry">
         
           <p>在好友的撺掇之下，我也学着开始在网络上建立自己的博客。</p>
 <h3 id="1-写在最开始的地方"><a href="#1-写在最开始的地方" class="headerlink" title="1. 写在最开始的地方"></a>1. 写在最开始的地方</h3><p>本博客由<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>框架构建，发布于github。文笔水平有限，要是有没有讲到位的地方还请多多包涵。</p>
-<h3 id="2-什么是Hexo"><a href="#2-什么是Hexo" class="headerlink" title="2. 什么是Hexo"></a>2. 什么是Hexo</h3><p>Hexo是一个前端的博客框架，需要注意的是这是一个比较专业化的框架，主要面对的是生成博客文章的静态页面。</p>
-<h3 id="3-通过Hexo构建博客框架"><a href="#3-通过Hexo构建博客框架" class="headerlink" title="3. 通过Hexo构建博客框架"></a>3. 通过Hexo构建博客框架</h3><blockquote>
-<p>本地需要安装: nodejs npm, git.</p>
-</blockquote>
-<h4 id="在本地安装Hexo客户端"><a href="#在本地安装Hexo客户端" class="headerlink" title="在本地安装Hexo客户端"></a>在本地安装Hexo客户端</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h4 id="初始化Hexo工程"><a href="#初始化Hexo工程" class="headerlink" title="初始化Hexo工程"></a>初始化Hexo工程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>其中，folder必须是一个空的文件夹。<br>在初始化工程之后，工程目录看上去是这样的:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<ul>
-<li>_config.yml 是配置文件，博客信息和发布地址需要配置在这里，下面会有比较详细的配置方法。  </li>
-<li>package.json 做过nodejs开发的都知道，就不多说了。没做过的说了也无法理解，我也不多嘴了。 </li>
-<li>scaffolds 暂时用不上。  </li>
-<li>source 前端可以拿到的资源路径，博文（放在_posts文件夹下）以及图片音乐等相关资源可以存放在该目录下。  </li>
-<li>themes 当前博客的主题样式，好的样式可以把前端累死，当然我们更专注的博客内容，不必要花时间在优化主题上（有兴趣的可以自己写theme），同时Hexo提供了非常丰富的<a href="https://hexo.io/themes/" target="_blank" rel="noopener">主题</a>。</li>
-</ul>
-<h4 id="启动本地预览"><a href="#启动本地预览" class="headerlink" title="启动本地预览"></a>启动本地预览</h4><p>有意思的是hexo的server功能和它的核心功能是分开的，需要先安装hexo-server。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save   //If you <span class="keyword">do</span> not have hexo-server installed.</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>本地正常启动之后，在 localhost:4000 可以预览目前完成的博客内容。启动之后，搭载默认主题样式的博客大概是这个样子的：<br><img src="/images/blogImage522/Hexo_default_theme.jpg" alt="DefaultHexo"></p>
-<h3 id="4-发布到个人github主页"><a href="#4-发布到个人github主页" class="headerlink" title="4. 发布到个人github主页"></a>4. 发布到个人github主页</h3><blockquote>
-<p>首先你要有一个github账户 ^_^，github相关的地方不再赘述</p>
-</blockquote>
-<h4 id="添加hexo对支持git发布的包"><a href="#添加hexo对支持git发布的包" class="headerlink" title="添加hexo对支持git发布的包"></a>添加hexo对支持git发布的包</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h4 id="修改配置文件-config-yml"><a href="#修改配置文件-config-yml" class="headerlink" title="修改配置文件 _config.yml"></a>修改配置文件 _config.yml</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: &lt;repository url&gt;</span><br><span class="line">  branch: [branch]</span><br></pre></td></tr></table></figure>
-<ul>
-<li>repo: 个人的github首页ssh地址，标准格式: git&#64;github.com:&lt;yourUserName&gt;\&lt;yourUserName&gt;.github.io.git</li>
-<li>branch: 目标分支，这个一般用master就可以了。</li>
-</ul>
-<h4 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>现在你就可以登录自己的github主页了，地址是: &lt;yourUserName&gt;.github.io</p>
-<h3 id="5-添加自己喜欢的主题"><a href="#5-添加自己喜欢的主题" class="headerlink" title="5. 添加自己喜欢的主题"></a>5. 添加自己喜欢的主题</h3><p>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官方主题列表</a>里选择自己喜欢的主题样式，通过git clone到本地工程的themes文件夹下，修改 _config.yml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: &lt;target theme repo&gt;</span><br></pre></td></tr></table></figure></p>
-<p>这样一来默认的主题就被替换成了你选择的主题样式。</p>
-<h4 id="hack主题样式"><a href="#hack主题样式" class="headerlink" title="hack主题样式"></a>hack主题样式</h4><p>有这个需求的一般都是大牛级别的前端开发。话不多说，Hexo样式和页面结构采用ejs模板编写，有兴趣的<a href="https://ejs.bootcss.com/" target="_blank" rel="noopener">ejs官网</a>借一步说话。</p>
-<h3 id="6-撰写博客"><a href="#6-撰写博客" class="headerlink" title="6. 撰写博客"></a>6. 撰写博客</h3><p>在source/_post下新建<a href="http://www.markdown.cn/" target="_blank" rel="noopener">markdown</a>文件，新加入的markdown文件在发布的时候自动加入到博客之中。更多与博客内容有关的还请自行体验。</p>
-
+          <p>
+            <a href="/2018/05/24/如何在github上优雅地建立自己的博客/">
+              阅读全文
+            </a>
+          </p>
         
       </div>
     </div>
